@@ -72,12 +72,16 @@
 
   <script>
   //takes in current time from javascript and updates the hands 
-
+  //grab second hand 
+  const secondHand = document.querySelector('.second-hand'); 
   //creating a function that will console log Hi every second (1000 miliseconds)
   function setDate() {
     const now = new Date();
     const seconds = now.getSeconds();
+    const secondsDegrees = ((seconds / 60) * 360 + 90);
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     console.log(seconds);
+
   }
 
   setInterval(setDate, 1000);

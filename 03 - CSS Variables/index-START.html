@@ -25,6 +25,19 @@
     /*
       misc styles, nothing to do with CSS variables
     */
+    /* CSS variables can be updated with JS now, new */
+
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+    }
 
     body {
       text-align: center;
